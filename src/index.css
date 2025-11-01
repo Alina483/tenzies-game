@@ -23,5 +23,31 @@ div#root {
 main {
     background-color: #F5F5F5;
     height: 100%;
-    border-radius: 10px; 
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.die {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 24px;
+    margin: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    place-items: center;
+    width: max-content;
+    margin: 0 auto;
 }
