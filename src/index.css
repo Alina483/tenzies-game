@@ -27,6 +27,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .die {
@@ -50,4 +51,21 @@ main {
     place-items: center;
     width: max-content;
     margin: 0 auto;
+}
+
+.roll-dice {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5035FF;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+.roll-dice:hover {
+    background-color: #3622CC;
+    transform: scale(1.01);
 }
