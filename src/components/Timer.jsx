@@ -1,23 +1,22 @@
-import { useState, useEffect } from 'react';
+import {  useEffect } from 'react';
 
-export default function Timer({ gameWon }) {
-    const [seconds, setSeconds] = useState(0);
+export default function Timer(prop) {
 
     useEffect(() => {
-        if (gameWon) {
+        if (prop.gameWon) {
             return; // Stop updating when game is won
         }
 
         const interval = setInterval(() => {
-            setSeconds(prev => prev + 1);
+            prop.setSeconds(prev => prev + 1);
         }, 1000);
 
         return () => clearInterval(interval);
-    }, [gameWon]);
+    }, [prop.gameWon, prop.setSeconds]);
 
     return (
         <div className="timer">
-            <h2>Timer: {seconds}s</h2>
+            <h2>Timer: {prop.seconds}s</h2>
         </div>
     )
 }
