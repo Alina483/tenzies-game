@@ -64,10 +64,3 @@ export default function App() {
     </main>
   )
 }
-
-
-/**
-     * Add timer and roll counter to see how quickly you can win (done)
-     * Style the dice to it looks like real dice
-     * Deploy the game online
-     */
