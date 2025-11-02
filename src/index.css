@@ -33,18 +33,34 @@ main {
     padding: 0 10px;
 }
 
-.die {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #333;
-    border-radius: 5px;
-    font-size: 24px;
-    margin: 5px;
-    cursor: pointer;
-    user-select: none;
+.die-face {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 5px;
+  border: 2px solid #333;
+  cursor: pointer;
+  position: relative;
+  margin: 2px;
+}
+
+.pip {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: transparent;
+  margin: auto;
+}
+
+.pip.active {
+  background: #333;
+}
+
+.die-face.held {
+  background: #59E391;
 }
 
 .container {
